@@ -1,0 +1,1293 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 3 5
+Title "MPPT"
+Date "2020-11-16"
+Rev "Rev 2.1"
+Comp ""
+Comment1 "Wilhelm Zeuschner"
+Comment2 "MPPT Solarboot Team HS Emden"
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L MPPT_Solar_lib:TPH2R608NH Q2
+U 1 1 5F591FE1
+P 4100 1750
+F 0 "Q2" V 4000 1450 50  0000 R CNN
+F 1 "TPH2R408QM,L1Q" V 3900 1500 50  0000 R CNN
+F 2 "MPPT_Solar_KiCAD:SOP_ADVANCE" V 4500 1750 50  0001 C CNN
+F 3 "https://www.digikey.de/product-detail/en/toshiba-semiconductor-and-storage/TPH2R408QM-L1Q/264-TPH2R408QML1QCT-ND/11658238" V 4500 1750 50  0001 C CNN
+F 4 "264-TPH2R408QML1QCT-ND" H 4100 1750 50  0001 C CNN "Digikey Part No"
+F 5 "TPH2R408QM,L1Q" H 4100 1750 50  0001 C CNN "Manufacturer Part Number"
+	1    4100 1750
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:C_Small C23
+U 1 1 5F59202C
+P 2650 2100
+F 0 "C23" V 2879 2100 50  0000 C CNN
+F 1 "100V 1uF" V 2788 2100 50  0000 C CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric" H 2688 1950 50  0001 C CNN
+F 3 "https://www.digikey.ch/product-detail/en/taiyo-yuden/HMK316BJ105KL-T/587-5021-1-ND/6563864" H 2650 2100 50  0001 C CNN
+F 4 "HMK316BJ105KL-T" H 2650 2100 50  0001 C CNN "Manufacturer Part Number"
+F 5 "" H 2650 2100 50  0001 C CNN "Mouser Part Number"
+F 6 "587-5021-1-ND" H 2650 2100 50  0001 C CNN "Digikey Part No"
+	1    2650 2100
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:C_Small C21
+U 1 1 5F59203A
+P 2650 1650
+F 0 "C21" V 2421 1650 50  0000 C CNN
+F 1 "100V 1uF" V 2512 1650 50  0000 C CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric" H 2688 1500 50  0001 C CNN
+F 3 "https://www.digikey.ch/product-detail/en/taiyo-yuden/HMK316BJ105KL-T/587-5021-1-ND/6563864" H 2650 1650 50  0001 C CNN
+F 4 "HMK316BJ105KL-T" H 2650 1650 50  0001 C CNN "Manufacturer Part Number"
+F 5 "" H 2650 1650 50  0001 C CNN "Mouser Part Number"
+F 6 "587-5021-1-ND" H 2650 1650 50  0001 C CNN "Digikey Part No"
+	1    2650 1650
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:CP_Small C20
+U 1 1 5F592040
+P 2000 2100
+F 0 "C20" V 2225 2100 50  0000 C CNN
+F 1 "100V 150uF" V 2134 2100 50  0000 C CNN
+F 2 "MPPT_Solar_KiCAD:CAPAE1300X1650N" H 2038 1950 50  0001 C CNN
+F 3 "https://www.digikey.de/product-detail/en/united-chemi-con/EMHS800GRA241MKG5S/565-5090-1-ND/8558344" H 2000 2100 50  0001 C CNN
+F 4 "EMHS101ARA151MKG5S" H 2000 2100 50  0001 C CNN "Manufacturer Part Number"
+F 5 "" H 2000 2100 50  0001 C CNN "Mouser Part Number"
+F 6 "565-5086-1-ND" H 2000 2100 50  0001 C CNN "Digikey Part No"
+	1    2000 2100
+	0    -1   -1   0   
+$EndComp
+Text Notes 750  800  0    50   ~ 0
+Boost converter:
+Text Label 4800 2200 2    50   ~ 0
+GATE_DRIVE
+Text Notes 6350 3050 0    50   ~ 0
+Gate driver:
+$Comp
+L Device:R_Small R21
+U 1 1 5F592136
+P 8150 3400
+F 0 "R21" V 7954 3400 50  0000 C CNN
+F 1 "0R" V 8045 3400 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 8150 3400 50  0001 C CNN
+F 3 "https://www.digikey.de/product-detail/en/yageo/RC0603FR-070RL/311-0-0HRCT-ND/4340584" H 8150 3400 50  0001 C CNN
+F 4 "311-0.0HRCT-ND" H 8150 3400 50  0001 C CNN "Digikey Part No"
+F 5 "RC0603FR-070RL" H 8150 3400 50  0001 C CNN "Manufacturer Part Number"
+	1    8150 3400
+	0    1    1    0   
+$EndComp
+Text Label 8850 3400 2    50   ~ 0
+GATE_DRIVE
+Wire Wire Line
+	8050 3400 7850 3400
+Wire Wire Line
+	7850 3500 8350 3500
+Wire Wire Line
+	8350 3500 8350 3400
+Connection ~ 8350 3400
+Wire Wire Line
+	8350 3400 8250 3400
+$Comp
+L power:GND #PWR062
+U 1 1 5F592143
+P 8000 3750
+F 0 "#PWR062" H 8000 3500 50  0001 C CNN
+F 1 "GND" H 8005 3577 50  0000 C CNN
+F 2 "" H 8000 3750 50  0001 C CNN
+F 3 "" H 8000 3750 50  0001 C CNN
+	1    8000 3750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7850 3600 8000 3600
+Text HLabel 6850 3500 0    50   Input ~ 0
+BOOST_EN
+Text HLabel 6850 3600 0    50   Input ~ 0
+BOOST_DRV
+Wire Wire Line
+	8000 3600 8000 3750
+$Comp
+L MPPT_Solar_lib:68uH L2
+U 1 1 5F4E8229
+P 3450 1200
+F 0 "L2" H 3450 1425 50  0000 C CNN
+F 1 "68uH" H 3450 1334 50  0000 C CNN
+F 2 "MPPT_Solar_KiCAD:74437429203680" H 4250 1050 50  0001 C CNN
+F 3 "https://www.digikey.de/products/en?keywords=74437429203680" V 3450 1200 50  0001 C CNN
+F 4 "74437429203680" H 3900 850 50  0001 C CNN "Manufacturer Part Number"
+F 5 "" H 4000 950 50  0001 C CNN "Mouser Part Number"
+F 6 "732-11708-ND" H 3450 1200 50  0001 C CNN "Digikey Part No"
+	1    3450 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR045
+U 1 1 5F79C54C
+P 2900 2250
+F 0 "#PWR045" H 2900 2000 50  0001 C CNN
+F 1 "GND" H 2905 2077 50  0000 C CNN
+F 2 "" H 2900 2250 50  0001 C CNN
+F 3 "" H 2900 2250 50  0001 C CNN
+	1    2900 2250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR049
+U 1 1 5F79C8A4
+P 2250 2250
+F 0 "#PWR049" H 2250 2000 50  0001 C CNN
+F 1 "GND" H 2255 2077 50  0000 C CNN
+F 2 "" H 2250 2250 50  0001 C CNN
+F 3 "" H 2250 2250 50  0001 C CNN
+	1    2250 2250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3600 1200 3950 1200
+Wire Wire Line
+	3950 1350 3950 1300
+Connection ~ 3950 1200
+Wire Wire Line
+	3950 1300 4050 1300
+Wire Wire Line
+	4250 1300 4250 1350
+Connection ~ 3950 1300
+Wire Wire Line
+	3950 1300 3950 1200
+Wire Wire Line
+	4050 1350 4050 1300
+Connection ~ 4050 1300
+Wire Wire Line
+	4050 1300 4150 1300
+Wire Wire Line
+	4150 1350 4150 1300
+Connection ~ 4150 1300
+Wire Wire Line
+	4150 1300 4250 1300
+Wire Wire Line
+	2250 2100 2250 2250
+Wire Wire Line
+	2900 2100 2900 2250
+$Comp
+L power:GND #PWR050
+U 1 1 5F7BA3A0
+P 3950 2250
+F 0 "#PWR050" H 3950 2000 50  0001 C CNN
+F 1 "GND" H 3955 2077 50  0000 C CNN
+F 2 "" H 3950 2250 50  0001 C CNN
+F 3 "" H 3950 2250 50  0001 C CNN
+	1    3950 2250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3950 2250 3950 2200
+Wire Wire Line
+	3950 2200 4050 2200
+Wire Wire Line
+	4050 2200 4050 2150
+Connection ~ 3950 2200
+Wire Wire Line
+	3950 2200 3950 2150
+Wire Wire Line
+	4050 2200 4150 2200
+Wire Wire Line
+	4150 2200 4150 2150
+Connection ~ 4050 2200
+Wire Wire Line
+	4800 2200 4250 2200
+Wire Wire Line
+	4250 2200 4250 2150
+Wire Wire Line
+	3950 1200 4350 1200
+Wire Wire Line
+	4350 1200 4400 1200
+Connection ~ 4350 1200
+Wire Wire Line
+	4350 1300 4350 1200
+Wire Wire Line
+	4400 1300 4350 1300
+$Comp
+L Device:C_Small C24
+U 1 1 5F592016
+P 6050 1650
+F 0 "C24" V 6279 1650 50  0000 C CNN
+F 1 "100V 1uF" V 6188 1650 50  0000 C CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric" H 6088 1500 50  0001 C CNN
+F 3 "https://www.digikey.ch/product-detail/en/taiyo-yuden/HMK316BJ105KL-T/587-5021-1-ND/6563864" H 6050 1650 50  0001 C CNN
+F 4 "HMK316BJ105KL-T" H 6050 1650 50  0001 C CNN "Manufacturer Part Number"
+F 5 "" H 6050 1650 50  0001 C CNN "Mouser Part Number"
+F 6 "587-5021-1-ND" H 6050 1650 50  0001 C CNN "Digikey Part No"
+	1    6050 1650
+	0    -1   -1   0   
+$EndComp
+Wire Notes Line
+	650  2750 650  650 
+$Comp
+L MPPT_Solar_lib:UCC27531DBVR U6
+U 1 1 5F592130
+P 7500 3500
+AR Path="/5F592130" Ref="U6"  Part="1" 
+AR Path="/5F50F017/5F592130" Ref="U6"  Part="1" 
+F 0 "U6" H 7500 3865 50  0000 C CNN
+F 1 "UCC27531DBVR" H 7500 3774 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-6" H 7500 3250 50  0001 C CNN
+F 3 "https://www.digikey.de/product-detail/en/texas-instruments/UCC27531DBVR/296-35581-1-ND/3830022" H 7500 3950 50  0001 C CNN
+F 4 "" H 7500 3150 50  0001 C CNN "PDF"
+F 5 "UCC27531DBVR" H 7500 3500 50  0001 C CNN "Manufacturer Part Number"
+F 6 "" H 7500 3500 50  0001 C CNN "Mouser Part Number"
+F 7 "296-35581-1-ND" H 7500 3500 50  0001 C CNN "Digikey Part No"
+	1    7500 3500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6850 3500 7150 3500
+Wire Wire Line
+	7100 3600 7150 3600
+Wire Wire Line
+	8350 3400 8850 3400
+$Comp
+L Device:C_Small C27
+U 1 1 5F8525EC
+P 9150 3500
+F 0 "C27" H 9242 3546 50  0000 L CNN
+F 1 "100V 1uF" H 9242 3455 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric" H 9188 3350 50  0001 C CNN
+F 3 "https://www.digikey.ch/product-detail/en/taiyo-yuden/HMK316BJ105KL-T/587-5021-1-ND/6563864" H 9150 3500 50  0001 C CNN
+F 4 "HMK316BJ105KL-T" H 9150 3500 50  0001 C CNN "Manufacturer Part Number"
+F 5 "" H 9150 3500 50  0001 C CNN "Mouser Part Number"
+F 6 "587-5021-1-ND" H 9150 3500 50  0001 C CNN "Digikey Part No"
+	1    9150 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C29
+U 1 1 5F85377B
+P 9700 3500
+F 0 "C29" H 9792 3546 50  0000 L CNN
+F 1 "100V 100nF" H 9792 3455 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 9700 3500 50  0001 C CNN
+F 3 "https://www.digikey.ch/product-detail/en/taiyo-yuden/HMK107B7104MA-T/587-6323-1-ND/9949909" H 9700 3500 50  0001 C CNN
+F 4 "CL10B104KC8NNNC" H 9700 3500 50  0001 C CNN "Manufacturer Part Number"
+F 5 "" H 9700 3500 50  0001 C CNN "Mouser Part Number"
+F 6 "587-6323-1-ND" H 9700 3500 50  0001 C CNN "Digikey Part No"
+	1    9700 3500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9150 3300 9150 3400
+Wire Wire Line
+	9150 3300 9700 3300
+Wire Wire Line
+	9700 3300 9700 3400
+$Comp
+L power:GND #PWR057
+U 1 1 5F85D325
+P 9150 3800
+F 0 "#PWR057" H 9150 3550 50  0001 C CNN
+F 1 "GND" H 9155 3627 50  0000 C CNN
+F 2 "" H 9150 3800 50  0001 C CNN
+F 3 "" H 9150 3800 50  0001 C CNN
+	1    9150 3800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9150 3600 9150 3700
+Wire Wire Line
+	9150 3700 9700 3700
+Wire Wire Line
+	9700 3700 9700 3600
+Connection ~ 9150 3700
+Wire Wire Line
+	9150 3700 9150 3800
+Wire Notes Line
+	6250 4100 6250 2900
+$Comp
+L Device:R_Small R15
+U 1 1 5FD7CE05
+P 1150 3900
+F 0 "R15" V 954 3900 50  0000 C CNN
+F 1 "10R" V 1045 3900 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 1150 3900 50  0001 C CNN
+F 3 "https://www.digikey.de/product-detail/en/stackpole-electronics-inc/RMCF0603FT10R0/RMCF0603FT10R0CT-ND/1942943" H 1150 3900 50  0001 C CNN
+F 4 "RMCF0603FT10R0CT-ND" H 1150 3900 50  0001 C CNN "Digikey Part No"
+F 5 "RMCF0603FT10R0" H 1150 3900 50  0001 C CNN "Manufacturer Part Number"
+	1    1150 3900
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_Small R16
+U 1 1 5FD7D62A
+P 1150 4200
+F 0 "R16" V 1254 4200 50  0000 C CNN
+F 1 "10R" V 1345 4200 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 1150 4200 50  0001 C CNN
+F 3 "https://www.digikey.de/product-detail/en/stackpole-electronics-inc/RMCF0603FT10R0/RMCF0603FT10R0CT-ND/1942943" H 1150 4200 50  0001 C CNN
+F 4 "RMCF0603FT10R0CT-ND" H 1150 4200 50  0001 C CNN "Digikey Part No"
+F 5 "RMCF0603FT10R0" H 1150 4200 50  0001 C CNN "Manufacturer Part Number"
+	1    1150 4200
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1250 4200 1300 4200
+Wire Wire Line
+	1300 4200 1300 4150
+Wire Wire Line
+	1250 3900 1300 3900
+Wire Wire Line
+	1300 3900 1300 3950
+Wire Wire Line
+	1300 3900 1650 3900
+Wire Wire Line
+	1650 3900 1650 4000
+Wire Wire Line
+	1650 4000 1750 4000
+Connection ~ 1300 3900
+Wire Wire Line
+	1750 4100 1650 4100
+Wire Wire Line
+	1650 4100 1650 4200
+Wire Wire Line
+	1650 4200 1300 4200
+Connection ~ 1300 4200
+Text Notes 800  5050 0    50   ~ 0
+C_Filt: 100nF bis 1uF Keramikkondensator.\nWeitere Tests und Messungen sind nötig.\nMehr Informationen im Datenblatt auf S. 14.
+Text Notes 800  5250 0    50   ~ 0
+Shut-Widerstandsberechnung:\nhttps://training.ti.com/getting-started-current-sense-amplifiers-session-15-programming-power-settings
+$Comp
+L Device:C_Small C?
+U 1 1 5FDAF521
+P 3600 3500
+AR Path="/5F50E0CF/5FDAF521" Ref="C?"  Part="1" 
+AR Path="/5F50F017/5FDAF521" Ref="C22"  Part="1" 
+F 0 "C22" H 3692 3546 50  0000 L CNN
+F 1 "100nF" H 3692 3455 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 3600 3500 50  0001 C CNN
+F 3 "https://www.digikey.ch/product-detail/en/samsung-electro-mechanics/CL10B104KB8NNNL/1276-CL10B104KB8NNNLCT-ND/10320686" H 3600 3500 50  0001 C CNN
+F 4 "" H 3600 3500 50  0001 C CNN "Mouser Part Number"
+F 5 "LMK063C6104KP-F" H 3600 3500 50  0001 C CNN "Manufacturer Part Number"
+F 6 "1276-CL10B104KB8NNNLCT-ND" H 3600 3500 50  0001 C CNN "Digikey Part No"
+	1    3600 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR047
+U 1 1 5FDB3DA1
+P 3600 3350
+F 0 "#PWR047" H 3600 3200 50  0001 C CNN
+F 1 "+3.3V" H 3615 3523 50  0000 C CNN
+F 2 "" H 3600 3350 50  0001 C CNN
+F 3 "" H 3600 3350 50  0001 C CNN
+	1    3600 3350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3600 3350 3600 3400
+$Comp
+L power:GND #PWR048
+U 1 1 5FDB8B56
+P 3600 3650
+F 0 "#PWR048" H 3600 3400 50  0001 C CNN
+F 1 "GND" H 3605 3477 50  0000 C CNN
+F 2 "" H 3600 3650 50  0001 C CNN
+F 3 "" H 3600 3650 50  0001 C CNN
+	1    3600 3650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3600 3650 3600 3600
+$Comp
+L power:+3.3V #PWR042
+U 1 1 5FDBD70C
+P 2150 3350
+F 0 "#PWR042" H 2150 3200 50  0001 C CNN
+F 1 "+3.3V" H 2165 3523 50  0000 C CNN
+F 2 "" H 2150 3350 50  0001 C CNN
+F 3 "" H 2150 3350 50  0001 C CNN
+	1    2150 3350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2150 3350 2150 3400
+$Comp
+L power:GND #PWR043
+U 1 1 5FDC24AA
+P 2150 4450
+F 0 "#PWR043" H 2150 4200 50  0001 C CNN
+F 1 "GND" H 2155 4277 50  0000 C CNN
+F 2 "" H 2150 4450 50  0001 C CNN
+F 3 "" H 2150 4450 50  0001 C CNN
+	1    2150 4450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2150 4450 2150 4400
+Text HLabel 2600 3900 2    50   BiDi ~ 0
+SDA
+Text HLabel 2600 4000 2    50   BiDi ~ 0
+SCL
+Wire Wire Line
+	2600 4000 2550 4000
+Wire Wire Line
+	2550 3900 2600 3900
+Text Notes 2700 4050 0    50   ~ 0
+~
+Text HLabel 3250 4200 2    50   BiDi ~ 0
+~ALERT_ISENS
+$Comp
+L power:GND #PWR046
+U 1 1 5FDF6CA7
+P 3000 3750
+F 0 "#PWR046" H 3000 3500 50  0001 C CNN
+F 1 "GND" H 3005 3577 50  0000 C CNN
+F 2 "" H 3000 3750 50  0001 C CNN
+F 3 "" H 3000 3750 50  0001 C CNN
+	1    3000 3750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2550 3700 2600 3700
+Wire Wire Line
+	3000 3700 3000 3750
+Wire Wire Line
+	2550 3600 2600 3600
+Wire Wire Line
+	2600 3600 2600 3700
+Connection ~ 2600 3700
+Wire Wire Line
+	2600 3700 3000 3700
+Text Label 750  1350 0    50   ~ 0
+VIN_P
+Text Label 1650 1350 2    50   ~ 0
+VIN_N
+Wire Wire Line
+	1650 1350 1400 1350
+Wire Wire Line
+	1400 1350 1400 1200
+Wire Wire Line
+	1000 1200 1000 1350
+Text Label 800  3900 0    50   ~ 0
+VIN_P
+Wire Wire Line
+	800  3900 1050 3900
+Text Label 800  4200 0    50   ~ 0
+VIN_N
+Wire Wire Line
+	800  4200 1050 4200
+Text Notes 750  3050 0    50   ~ 0
+INA226 power sensor:
+Wire Notes Line
+	650  4700 650  2900
+$Comp
+L MPPT_Solar_lib:INA226 U4
+U 1 1 5F891FF2
+P 2150 3900
+F 0 "U4" H 2300 4500 50  0000 C CNN
+F 1 "INA226" H 2350 4400 50  0000 C CNN
+F 2 "Package_SO:VSSOP-10_3x3mm_P0.5mm" H 2950 3450 50  0001 C CNN
+F 3 "https://www.digikey.de/product-detail/en/texas-instruments/INA226AIDGSR/296-29034-1-ND/2687118" H 2500 3800 50  0001 C CNN
+F 4 "296-29034-1-ND" H 2150 3900 50  0001 C CNN "Digikey Part No"
+F 5 "INA226AIDGSR" H 2150 3900 50  0001 C CNN "Manufacturer Part Number"
+	1    2150 3900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3650 6250 3650 6200
+$Comp
+L Device:R_Small R18
+U 1 1 5F521B73
+P 3650 6100
+F 0 "R18" H 3591 6054 50  0000 R CNN
+F 1 "10k" H 3591 6145 50  0000 R CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 3650 6100 50  0001 C CNN
+F 3 "https://www.mouser.de/ProductDetail/Yageo/RC0603FR-0710KL?qs=sGAEpiMZZMvdGkrng054t%252BZQNaZdkHZDFRS%252Bk3sHilE%3D" H 3650 6100 50  0001 C CNN
+F 4 "RC0603FR-0710KL" H 3650 6100 50  0001 C CNN "Manufacturer Part Number"
+F 5 "" H 3650 6100 50  0001 C CNN "Mouser Part Number"
+F 6 "311-10.0KHRCT-ND" H 3650 6100 50  0001 C CNN "Digikey Part No"
+	1    3650 6100
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R_Small R19
+U 1 1 5F5263A2
+P 3650 6350
+F 0 "R19" H 3591 6304 50  0000 R CNN
+F 1 "10k" H 3591 6395 50  0000 R CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 3650 6350 50  0001 C CNN
+F 3 "https://www.mouser.de/ProductDetail/Yageo/RC0603FR-0710KL?qs=sGAEpiMZZMvdGkrng054t%252BZQNaZdkHZDFRS%252Bk3sHilE%3D" H 3650 6350 50  0001 C CNN
+F 4 "RC0603FR-0710KL" H 3650 6350 50  0001 C CNN "Manufacturer Part Number"
+F 5 "" H 3650 6350 50  0001 C CNN "Mouser Part Number"
+F 6 "311-10.0KHRCT-ND" H 3650 6350 50  0001 C CNN "Digikey Part No"
+	1    3650 6350
+	-1   0    0    1   
+$EndComp
+Text HLabel 4700 6550 2    50   Output ~ 0
+V_SENSE_OUT
+$Comp
+L Device:R_Small R20
+U 1 1 5F592078
+P 3650 6750
+F 0 "R20" H 3709 6796 50  0000 L CNN
+F 1 "1k" H 3709 6705 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 3650 6750 50  0001 C CNN
+F 3 "https://www.mouser.de/ProductDetail/Vishay-Dale/CRCW06031K00FKEAC?qs=sGAEpiMZZMvdGkrng054t0DrEhLhGh8g1B5lDmmPZz5NoSHbyVr1tg%3D%3D" H 3650 6750 50  0001 C CNN
+F 4 "CRCW06031K00FKEAC" H 3650 6750 50  0001 C CNN "Manufacturer Part Number"
+F 5 "" H 3650 6750 50  0001 C CNN "Mouser Part Number"
+F 6 "541-3949-1-ND" H 3650 6750 50  0001 C CNN "Digikey Part No"
+	1    3650 6750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	800  1100 800  1200
+Wire Wire Line
+	1650 3450 1650 3600
+Wire Wire Line
+	1650 3600 1750 3600
+$Comp
+L Regulator_Linear:L78L18_SOT89 U5
+U 1 1 5FB3F11F
+P 7450 4900
+F 0 "U5" H 7450 5142 50  0000 C CNN
+F 1 "L78L18_SOT89" H 7450 5051 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-89-3" H 7450 5100 50  0001 C CIN
+F 3 "https://www.digikey.de/product-detail/en/stmicroelectronics/L78L18ACUTR/497-7280-1-ND/1883360" H 7450 4850 50  0001 C CNN
+F 4 "497-7280-1-ND" H 7450 4900 50  0001 C CNN "Digikey Part No"
+F 5 "L78L18ACUTR" H 7450 4900 50  0001 C CNN "Manufacturer Part Number"
+	1    7450 4900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C26
+U 1 1 5FB4B371
+P 6800 5050
+F 0 "C26" H 6915 5096 50  0000 L CNN
+F 1 "100V 1uF" H 6850 4950 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric" H 6838 4900 50  0001 C CNN
+F 3 "https://www.digikey.ch/product-detail/en/taiyo-yuden/HMK316BJ105KL-T/587-5021-1-ND/6563864" H 6800 5050 50  0001 C CNN
+F 4 "HMK316BJ105KL-T" H 6800 5050 50  0001 C CNN "Manufacturer Part Number"
+F 5 "" H 6800 5050 50  0001 C CNN "Mouser Part Number"
+F 6 "587-5021-1-ND" H 6800 5050 50  0001 C CNN "Digikey Part No"
+	1    6800 5050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C30
+U 1 1 5FB4B86D
+P 8000 5050
+F 0 "C30" H 8115 5096 50  0000 L CNN
+F 1 "100V 1uF" H 8050 4950 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric" H 8038 4900 50  0001 C CNN
+F 3 "https://www.digikey.ch/product-detail/en/taiyo-yuden/HMK316BJ105KL-T/587-5021-1-ND/6563864" H 8000 5050 50  0001 C CNN
+F 4 "HMK316BJ105KL-T" H 8000 5050 50  0001 C CNN "Manufacturer Part Number"
+F 5 "" H 8000 5050 50  0001 C CNN "Mouser Part Number"
+F 6 "587-5021-1-ND" H 8000 5050 50  0001 C CNN "Digikey Part No"
+	1    8000 5050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6800 4950 6800 4900
+Wire Wire Line
+	6800 4900 7150 4900
+Wire Wire Line
+	7750 4900 8000 4900
+Wire Wire Line
+	8000 4900 8000 4950
+Wire Wire Line
+	6800 4800 6800 4900
+Connection ~ 6800 4900
+$Comp
+L power:GND #PWR054
+U 1 1 5FB56B90
+P 6800 5250
+F 0 "#PWR054" H 6800 5000 50  0001 C CNN
+F 1 "GND" H 6805 5077 50  0000 C CNN
+F 2 "" H 6800 5250 50  0001 C CNN
+F 3 "" H 6800 5250 50  0001 C CNN
+	1    6800 5250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6800 5250 6800 5150
+$Comp
+L power:GND #PWR060
+U 1 1 5FB5A2B3
+P 8000 5250
+F 0 "#PWR060" H 8000 5000 50  0001 C CNN
+F 1 "GND" H 8005 5077 50  0000 C CNN
+F 2 "" H 8000 5250 50  0001 C CNN
+F 3 "" H 8000 5250 50  0001 C CNN
+	1    8000 5250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8000 5250 8000 5150
+$Comp
+L power:GND #PWR058
+U 1 1 5FB5D91F
+P 7450 5250
+F 0 "#PWR058" H 7450 5000 50  0001 C CNN
+F 1 "GND" H 7455 5077 50  0000 C CNN
+F 2 "" H 7450 5250 50  0001 C CNN
+F 3 "" H 7450 5250 50  0001 C CNN
+	1    7450 5250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7450 5250 7450 5200
+Text Notes 6650 4400 0    50   ~ 0
+Gate driver power supply (18V):
+Wire Notes Line
+	6550 4250 8500 4250
+Wire Notes Line
+	8500 4250 8500 5550
+Wire Notes Line
+	8500 5550 6550 5550
+Wire Notes Line
+	6550 4250 6550 5550
+$Comp
+L power:+VSW #PWR059
+U 1 1 5FB76F06
+P 8000 4800
+F 0 "#PWR059" H 8000 4650 50  0001 C CNN
+F 1 "+VSW" H 8015 4973 50  0000 C CNN
+F 2 "" H 8000 4800 50  0001 C CNN
+F 3 "" H 8000 4800 50  0001 C CNN
+	1    8000 4800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8000 4800 8000 4900
+Connection ~ 8000 4900
+$Comp
+L power:+VSW #PWR056
+U 1 1 5FB83BFB
+P 9150 3250
+F 0 "#PWR056" H 9150 3100 50  0001 C CNN
+F 1 "+VSW" H 9165 3423 50  0000 C CNN
+F 2 "" H 9150 3250 50  0001 C CNN
+F 3 "" H 9150 3250 50  0001 C CNN
+	1    9150 3250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9150 3250 9150 3300
+Connection ~ 9150 3300
+$Comp
+L power:+VSW #PWR061
+U 1 1 5FB87B8F
+P 7000 3350
+F 0 "#PWR061" H 7000 3200 50  0001 C CNN
+F 1 "+VSW" H 7015 3523 50  0000 C CNN
+F 2 "" H 7000 3350 50  0001 C CNN
+F 3 "" H 7000 3350 50  0001 C CNN
+	1    7000 3350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7000 3350 7000 3400
+Wire Wire Line
+	7000 3400 7150 3400
+$Comp
+L Device:R R17
+U 1 1 5FCF5B0F
+P 1200 1200
+F 0 "R17" V 993 1200 50  0000 C CNN
+F 1 "10mR" V 1084 1200 50  0000 C CNN
+F 2 "Resistor_SMD:R_0612_1632Metric" V 1130 1200 50  0001 C CNN
+F 3 "https://www.digikey.de/product-detail/en/bourns-inc/CFG0612-FX-R010ELF/CFG0612-FX-R010ELFCT-ND/9924214" H 1200 1200 50  0001 C CNN
+F 4 "CFG0612-FX-R010ELFCT-ND" H 1200 1200 50  0001 C CNN "Digikey Part No"
+F 5 "CFG0612-FX-R010ELF" H 1200 1200 50  0001 C CNN "Manufacturer Part Number"
+	1    1200 1200
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1350 1200 1400 1200
+Wire Wire Line
+	800  1200 1000 1200
+Connection ~ 1400 1200
+Connection ~ 1000 1200
+Wire Wire Line
+	1000 1200 1050 1200
+$Comp
+L power:VCC #PWR?
+U 1 1 5FD3786C
+P 800 1100
+AR Path="/5FD3786C" Ref="#PWR?"  Part="1" 
+AR Path="/5F50F017/5FD3786C" Ref="#PWR0103"  Part="1" 
+F 0 "#PWR0103" H 800 950 50  0001 C CNN
+F 1 "VCC" H 815 1273 50  0000 C CNN
+F 2 "" H 800 1100 50  0001 C CNN
+F 3 "" H 800 1100 50  0001 C CNN
+	1    800  1100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR?
+U 1 1 5FD3EFB8
+P 1650 3450
+AR Path="/5FD3EFB8" Ref="#PWR?"  Part="1" 
+AR Path="/5F50F017/5FD3EFB8" Ref="#PWR0104"  Part="1" 
+F 0 "#PWR0104" H 1650 3300 50  0001 C CNN
+F 1 "VCC" H 1665 3623 50  0000 C CNN
+F 2 "" H 1650 3450 50  0001 C CNN
+F 3 "" H 1650 3450 50  0001 C CNN
+	1    1650 3450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR?
+U 1 1 5FD43155
+P 6800 4800
+AR Path="/5FD43155" Ref="#PWR?"  Part="1" 
+AR Path="/5F50F017/5FD43155" Ref="#PWR0105"  Part="1" 
+F 0 "#PWR0105" H 6800 4650 50  0001 C CNN
+F 1 "VCC" H 6815 4973 50  0000 C CNN
+F 2 "" H 6800 4800 50  0001 C CNN
+F 3 "" H 6800 4800 50  0001 C CNN
+	1    6800 4800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP_Small C32
+U 1 1 5FD77F6E
+P 5400 2100
+F 0 "C32" V 5625 2100 50  0000 C CNN
+F 1 "100V 150uF" V 5534 2100 50  0000 C CNN
+F 2 "MPPT_Solar_KiCAD:CAPAE1300X1650N" H 5438 1950 50  0001 C CNN
+F 3 "https://www.digikey.de/product-detail/en/united-chemi-con/EMHS800GRA241MKG5S/565-5090-1-ND/8558344" H 5400 2100 50  0001 C CNN
+F 4 "EMHS101ARA151MKG5S" H 5400 2100 50  0001 C CNN "Manufacturer Part Number"
+F 5 "" H 5400 2100 50  0001 C CNN "Mouser Part Number"
+F 6 "565-5086-1-ND" H 5400 2100 50  0001 C CNN "Digikey Part No"
+	1    5400 2100
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:CP_Small C25
+U 1 1 5FD905E5
+P 2000 1650
+F 0 "C25" V 2225 1650 50  0000 C CNN
+F 1 "100V 150uF" V 2134 1650 50  0000 C CNN
+F 2 "MPPT_Solar_KiCAD:CAPAE1300X1650N" H 2038 1500 50  0001 C CNN
+F 3 "https://www.digikey.de/product-detail/en/united-chemi-con/EMHS800GRA241MKG5S/565-5090-1-ND/8558344" H 2000 1650 50  0001 C CNN
+F 4 "EMHS101ARA151MKG5S" H 2000 1650 50  0001 C CNN "Manufacturer Part Number"
+F 5 "" H 2000 1650 50  0001 C CNN "Mouser Part Number"
+F 6 "565-5086-1-ND" H 2000 1650 50  0001 C CNN "Digikey Part No"
+	1    2000 1650
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GNDA #PWR?
+U 1 1 6003D9BA
+P 3650 6950
+AR Path="/5F50E0CF/6003D9BA" Ref="#PWR?"  Part="1" 
+AR Path="/5F50F017/6003D9BA" Ref="#PWR0121"  Part="1" 
+F 0 "#PWR0121" H 3650 6700 50  0001 C CNN
+F 1 "GNDA" H 3655 6777 50  0000 C CNN
+F 2 "" H 3650 6950 50  0001 C CNN
+F 3 "" H 3650 6950 50  0001 C CNN
+	1    3650 6950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R23
+U 1 1 600906E1
+P 7000 3600
+F 0 "R23" V 7104 3600 50  0000 C CNN
+F 1 "10R" V 7195 3600 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 7000 3600 50  0001 C CNN
+F 3 "https://www.digikey.de/product-detail/en/stackpole-electronics-inc/RMCF0603FT10R0/RMCF0603FT10R0CT-ND/1942943" H 7000 3600 50  0001 C CNN
+F 4 "RMCF0603FT10R0CT-ND" H 7000 3600 50  0001 C CNN "Digikey Part No"
+F 5 "RMCF0603FT10R0" H 7000 3600 50  0001 C CNN "Manufacturer Part Number"
+	1    7000 3600
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6850 3600 6900 3600
+Wire Notes Line
+	11050 650  11050 2750
+Wire Notes Line
+	650  2750 11050 2750
+Wire Notes Line
+	650  650  11050 650 
+$Comp
+L Device:R_Small R24
+U 1 1 601A210F
+P 3200 3900
+AR Path="/5F50F017/601A210F" Ref="R24"  Part="1" 
+AR Path="/5F50E0CF/601A210F" Ref="R?"  Part="1" 
+F 0 "R24" H 3141 3854 50  0000 R CNN
+F 1 "10k" H 3141 3945 50  0000 R CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 3200 3900 50  0001 C CNN
+F 3 "https://www.mouser.de/ProductDetail/Yageo/RC0603FR-0710KL?qs=sGAEpiMZZMvdGkrng054t%252BZQNaZdkHZDFRS%252Bk3sHilE%3D" H 3200 3900 50  0001 C CNN
+F 4 "RC0603FR-0710KL" H 3200 3900 50  0001 C CNN "Manufacturer Part Number"
+F 5 "" H 3200 3900 50  0001 C CNN "Mouser Part Number"
+F 6 "311-10.0KHRCT-ND" H 3200 3900 50  0001 C CNN "Digikey Part No"
+	1    3200 3900
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:+3.3V #PWR?
+U 1 1 601A2115
+P 3200 3650
+AR Path="/5F50E0CF/601A2115" Ref="#PWR?"  Part="1" 
+AR Path="/5F50F017/601A2115" Ref="#PWR063"  Part="1" 
+F 0 "#PWR063" H 3200 3500 50  0001 C CNN
+F 1 "+3.3V" H 3215 3823 50  0000 C CNN
+F 2 "" H 3200 3650 50  0001 C CNN
+F 3 "" H 3200 3650 50  0001 C CNN
+	1    3200 3650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3200 3650 3200 3800
+Wire Wire Line
+	2550 4200 3200 4200
+Wire Wire Line
+	3200 4000 3200 4200
+Connection ~ 3200 4200
+Wire Wire Line
+	3200 4200 3250 4200
+Wire Notes Line
+	4300 2900 4300 4700
+Wire Notes Line
+	650  2900 4300 2900
+Wire Notes Line
+	650  4700 4300 4700
+$Comp
+L Device:C_Small C?
+U 1 1 601FC3DD
+P 1300 4050
+AR Path="/5F50E0CF/601FC3DD" Ref="C?"  Part="1" 
+AR Path="/5F50F017/601FC3DD" Ref="C19"  Part="1" 
+F 0 "C19" H 1392 4096 50  0000 L CNN
+F 1 "100nF" H 1392 4005 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 1300 4050 50  0001 C CNN
+F 3 "https://www.digikey.ch/product-detail/en/samsung-electro-mechanics/CL10B104KB8NNNL/1276-CL10B104KB8NNNLCT-ND/10320686" H 1300 4050 50  0001 C CNN
+F 4 "" H 1300 4050 50  0001 C CNN "Mouser Part Number"
+F 5 "LMK063C6104KP-F" H 1300 4050 50  0001 C CNN "Manufacturer Part Number"
+F 6 "1276-CL10B104KB8NNNLCT-ND" H 1300 4050 50  0001 C CNN "Digikey Part No"
+	1    1300 4050
+	1    0    0    -1  
+$EndComp
+Text Notes 1050 4650 0    50   ~ 0
+C19: filter capacitor\nvalues 100nF - 1uF
+$Comp
+L Device:C_Small C38
+U 1 1 60207AB1
+P 10350 3500
+F 0 "C38" H 10442 3546 50  0000 L CNN
+F 1 "100V 100nF" H 10442 3455 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 10350 3500 50  0001 C CNN
+F 3 "https://www.digikey.ch/product-detail/en/taiyo-yuden/HMK107B7104MA-T/587-6323-1-ND/9949909" H 10350 3500 50  0001 C CNN
+F 4 "CL10B104KC8NNNC" H 10350 3500 50  0001 C CNN "Manufacturer Part Number"
+F 5 "" H 10350 3500 50  0001 C CNN "Mouser Part Number"
+F 6 "587-6323-1-ND" H 10350 3500 50  0001 C CNN "Digikey Part No"
+	1    10350 3500
+	1    0    0    -1  
+$EndComp
+Wire Notes Line
+	11050 2900 11050 4100
+Wire Notes Line
+	6250 4100 11050 4100
+Wire Notes Line
+	6250 2900 11050 2900
+Wire Wire Line
+	9700 3300 10350 3300
+Wire Wire Line
+	10350 3300 10350 3400
+Connection ~ 9700 3300
+Wire Wire Line
+	9700 3700 10350 3700
+Wire Wire Line
+	10350 3700 10350 3600
+Connection ~ 9700 3700
+$Comp
+L Device:CP_Small C31
+U 1 1 5FD86A58
+P 5400 1650
+F 0 "C31" V 5625 1650 50  0000 C CNN
+F 1 "100V 150uF" V 5534 1650 50  0000 C CNN
+F 2 "MPPT_Solar_KiCAD:CAPAE1300X1650N" H 5438 1500 50  0001 C CNN
+F 3 "https://www.digikey.de/product-detail/en/united-chemi-con/EMHS800GRA241MKG5S/565-5090-1-ND/8558344" H 5400 1650 50  0001 C CNN
+F 4 "EMHS101ARA151MKG5S" H 5400 1650 50  0001 C CNN "Manufacturer Part Number"
+F 5 "" H 5400 1650 50  0001 C CNN "Mouser Part Number"
+F 6 "565-5086-1-ND" H 5400 1650 50  0001 C CNN "Digikey Part No"
+	1    5400 1650
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	1400 1200 1750 1200
+Wire Wire Line
+	1900 1650 1750 1650
+Wire Wire Line
+	1750 1650 1750 1200
+Connection ~ 1750 1200
+Wire Wire Line
+	1750 1650 1750 2100
+Wire Wire Line
+	1750 2100 1900 2100
+Connection ~ 1750 1650
+Wire Wire Line
+	1750 1200 2400 1200
+Wire Wire Line
+	2550 1650 2400 1650
+Wire Wire Line
+	2400 1650 2400 1200
+Wire Wire Line
+	2750 1650 2900 1650
+Wire Wire Line
+	2900 1650 2900 2100
+Wire Wire Line
+	2900 2100 2750 2100
+Wire Wire Line
+	2400 1650 2400 2100
+Wire Wire Line
+	2400 2100 2550 2100
+Connection ~ 2400 1650
+Wire Wire Line
+	2100 1650 2250 1650
+Wire Wire Line
+	2250 1650 2250 2100
+Wire Wire Line
+	2250 2100 2100 2100
+Connection ~ 2250 2100
+Connection ~ 2900 2100
+$Comp
+L Device:C_Small C39
+U 1 1 602BFEF2
+P 3350 1650
+F 0 "C39" V 3121 1650 50  0000 C CNN
+F 1 "100V 100nF" V 3212 1650 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 3350 1650 50  0001 C CNN
+F 3 "https://www.digikey.ch/product-detail/en/taiyo-yuden/HMK107B7104MA-T/587-6323-1-ND/9949909" H 3350 1650 50  0001 C CNN
+F 4 "CL10B104KC8NNNC" H 3350 1650 50  0001 C CNN "Manufacturer Part Number"
+F 5 "" H 3350 1650 50  0001 C CNN "Mouser Part Number"
+F 6 "587-6323-1-ND" H 3350 1650 50  0001 C CNN "Digikey Part No"
+	1    3350 1650
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3250 1650 3050 1650
+Wire Wire Line
+	3050 1650 3050 1200
+Wire Wire Line
+	3450 1650 3600 1650
+Wire Wire Line
+	3600 1650 3600 2100
+Wire Wire Line
+	3600 2100 3450 2100
+$Comp
+L Device:C_Small C40
+U 1 1 602D0111
+P 3350 2100
+F 0 "C40" V 3121 2100 50  0000 C CNN
+F 1 "100V 100nF" V 3212 2100 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 3350 2100 50  0001 C CNN
+F 3 "https://www.digikey.ch/product-detail/en/taiyo-yuden/HMK107B7104MA-T/587-6323-1-ND/9949909" H 3350 2100 50  0001 C CNN
+F 4 "CL10B104KC8NNNC" H 3350 2100 50  0001 C CNN "Manufacturer Part Number"
+F 5 "" H 3350 2100 50  0001 C CNN "Mouser Part Number"
+F 6 "587-6323-1-ND" H 3350 2100 50  0001 C CNN "Digikey Part No"
+	1    3350 2100
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3250 2100 3050 2100
+Wire Wire Line
+	3050 2100 3050 1650
+Connection ~ 3050 1650
+$Comp
+L power:GND #PWR0123
+U 1 1 602D7DA4
+P 3600 2250
+F 0 "#PWR0123" H 3600 2000 50  0001 C CNN
+F 1 "GND" H 3605 2077 50  0000 C CNN
+F 2 "" H 3600 2250 50  0001 C CNN
+F 3 "" H 3600 2250 50  0001 C CNN
+	1    3600 2250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3600 2100 3600 2250
+$Comp
+L MPPT_Solar_lib:V15P8HM3_A_H D7
+U 1 1 5F57E6AA
+P 4600 1200
+F 0 "D7" H 4625 975 50  0000 C CNN
+F 1 "TSPB20U80S S1G" H 4625 1066 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:TO-277A" H 5350 950 50  0001 C CNN
+F 3 "https://www.digikey.de/product-detail/en/taiwan-semiconductor-corporation/TSPB20U80S-S1G/TSPB20U80SS1GCT-ND/7360696" H 4600 1200 50  0001 C CNN
+F 4 "TSPB20U80S S1G" H 5100 750 50  0001 C CNN "Manufacturer Part Number"
+F 5 "TSPB20U80SS1GCT-ND" H 4600 1200 50  0001 C CNN "Digikey Part No"
+	1    4600 1200
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4750 1200 5150 1200
+$Comp
+L power:GND #PWR0124
+U 1 1 60305D4A
+P 5650 2250
+F 0 "#PWR0124" H 5650 2000 50  0001 C CNN
+F 1 "GND" H 5655 2077 50  0000 C CNN
+F 2 "" H 5650 2250 50  0001 C CNN
+F 3 "" H 5650 2250 50  0001 C CNN
+	1    5650 2250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5650 2100 5650 2250
+Wire Wire Line
+	5300 1650 5150 1650
+Wire Wire Line
+	5150 1650 5150 1200
+Wire Wire Line
+	5150 1650 5150 2100
+Wire Wire Line
+	5150 2100 5300 2100
+Connection ~ 5150 1650
+Wire Wire Line
+	5500 1650 5650 1650
+Wire Wire Line
+	5650 1650 5650 2100
+Wire Wire Line
+	5650 2100 5500 2100
+Connection ~ 5650 2100
+$Comp
+L power:GND #PWR0125
+U 1 1 6031C607
+P 6300 2250
+F 0 "#PWR0125" H 6300 2000 50  0001 C CNN
+F 1 "GND" H 6305 2077 50  0000 C CNN
+F 2 "" H 6300 2250 50  0001 C CNN
+F 3 "" H 6300 2250 50  0001 C CNN
+	1    6300 2250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5950 1650 5800 1650
+Wire Wire Line
+	5800 1650 5800 1200
+Wire Wire Line
+	6150 1650 6300 1650
+Connection ~ 2400 1200
+Connection ~ 3050 1200
+Connection ~ 3600 2100
+Wire Wire Line
+	2400 1200 3050 1200
+Wire Wire Line
+	3050 1200 3300 1200
+Wire Wire Line
+	750  1350 1000 1350
+Connection ~ 5150 1200
+Wire Wire Line
+	5150 1200 5800 1200
+Connection ~ 5800 1200
+Wire Wire Line
+	5800 1200 6450 1200
+$Comp
+L Device:C_Small C42
+U 1 1 60373C96
+P 6750 1650
+F 0 "C42" V 6521 1650 50  0000 C CNN
+F 1 "100V 100nF" V 6612 1650 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 6750 1650 50  0001 C CNN
+F 3 "https://www.digikey.ch/product-detail/en/taiyo-yuden/HMK107B7104MA-T/587-6323-1-ND/9949909" H 6750 1650 50  0001 C CNN
+F 4 "CL10B104KC8NNNC" H 6750 1650 50  0001 C CNN "Manufacturer Part Number"
+F 5 "" H 6750 1650 50  0001 C CNN "Mouser Part Number"
+F 6 "587-6323-1-ND" H 6750 1650 50  0001 C CNN "Digikey Part No"
+	1    6750 1650
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6650 1650 6450 1650
+Wire Wire Line
+	6850 1650 7000 1650
+Wire Wire Line
+	7000 1650 7000 2100
+Wire Wire Line
+	7000 2100 6850 2100
+$Comp
+L Device:C_Small C43
+U 1 1 60373CA4
+P 6750 2100
+F 0 "C43" V 6521 2100 50  0000 C CNN
+F 1 "100V 100nF" V 6612 2100 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 6750 2100 50  0001 C CNN
+F 3 "https://www.digikey.ch/product-detail/en/taiyo-yuden/HMK107B7104MA-T/587-6323-1-ND/9949909" H 6750 2100 50  0001 C CNN
+F 4 "CL10B104KC8NNNC" H 6750 2100 50  0001 C CNN "Manufacturer Part Number"
+F 5 "" H 6750 2100 50  0001 C CNN "Mouser Part Number"
+F 6 "587-6323-1-ND" H 6750 2100 50  0001 C CNN "Digikey Part No"
+	1    6750 2100
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6650 2100 6450 2100
+Wire Wire Line
+	6450 2100 6450 1650
+$Comp
+L power:GND #PWR040
+U 1 1 60373CAD
+P 7000 2250
+F 0 "#PWR040" H 7000 2000 50  0001 C CNN
+F 1 "GND" H 7005 2077 50  0000 C CNN
+F 2 "" H 7000 2250 50  0001 C CNN
+F 3 "" H 7000 2250 50  0001 C CNN
+	1    7000 2250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7000 2100 7000 2250
+Connection ~ 7000 2100
+Wire Wire Line
+	6300 1650 6300 2250
+Connection ~ 6450 1650
+Wire Wire Line
+	6450 1650 6450 1200
+Connection ~ 6450 1200
+Text Notes 3400 7500 0    50   ~ 0
+Tests needed; may swap 1nF Cap for 100nF\nfor example to re-use BOM parts. 1k resistor is\nonly used here as well!
+Wire Wire Line
+	3650 6450 3650 6550
+Connection ~ 3650 6550
+Wire Wire Line
+	3650 6550 3650 6650
+$Comp
+L Device:C_Small C28
+U 1 1 60817CA6
+P 4000 6750
+F 0 "C28" H 4115 6796 50  0000 L CNN
+F 1 "1nF" H 4115 6705 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 4038 6600 50  0001 C CNN
+F 3 "https://www.digikey.ch/product-detail/en/kemet/C0603C102J5RACAUTO/399-12989-1-ND/5762271" H 4000 6750 50  0001 C CNN
+F 4 "C0603C102J5RACAUTO" H 4000 6750 50  0001 C CNN "Manufacturer Part Number"
+F 5 "" H 4000 6750 50  0001 C CNN "Mouser Part Number"
+F 6 "399-12989-1-ND" H 4000 6750 50  0001 C CNN "Digikey Part No"
+	1    4000 6750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4000 6550 4000 6650
+Connection ~ 4350 6550
+Wire Wire Line
+	4350 6550 4350 6650
+$Comp
+L Device:D_Schottky_Small D?
+U 1 1 608D46C9
+P 4350 6400
+AR Path="/5F50E0CF/608D46C9" Ref="D?"  Part="1" 
+AR Path="/5F50F017/608D46C9" Ref="D12"  Part="1" 
+F 0 "D12" V 4304 6470 50  0000 L CNN
+F 1 "SS16HE" V 4395 6470 50  0000 L CNN
+F 2 "Diode_SMD:D_SOD-323" H 4350 6400 50  0001 C CNN
+F 3 "https://www.digikey.de/product-detail/en/on-semiconductor/SS16HE/SS16HECT-ND/6009714" H 4350 6400 50  0001 C CNN
+F 4 "SS16HE" H 4350 6400 50  0001 C CNN "Manufacturer Part Number"
+F 5 "" H 4350 6400 50  0001 C CNN "Mouser Part Number"
+F 6 "SS16HECT-ND" H 4350 6400 50  0001 C CNN "Digikey Part No"
+	1    4350 6400
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4350 6500 4350 6550
+$Comp
+L power:+3.3VA #PWR066
+U 1 1 608D46D0
+P 4350 6250
+AR Path="/5F50F017/608D46D0" Ref="#PWR066"  Part="1" 
+AR Path="/5F50E0CF/608D46D0" Ref="#PWR?"  Part="1" 
+F 0 "#PWR066" H 4350 6100 50  0001 C CNN
+F 1 "+3.3VA" H 4365 6423 50  0000 C CNN
+F 2 "" H 4350 6250 50  0001 C CNN
+F 3 "" H 4350 6250 50  0001 C CNN
+	1    4350 6250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4350 6250 4350 6300
+Wire Wire Line
+	4350 6550 4700 6550
+$Comp
+L Device:D_Schottky_Small D?
+U 1 1 608D46DB
+P 4350 6750
+AR Path="/5F50E0CF/608D46DB" Ref="D?"  Part="1" 
+AR Path="/5F50F017/608D46DB" Ref="D13"  Part="1" 
+F 0 "D13" V 4304 6820 50  0000 L CNN
+F 1 "SS16HE" V 4395 6820 50  0000 L CNN
+F 2 "Diode_SMD:D_SOD-323" H 4350 6750 50  0001 C CNN
+F 3 "https://www.digikey.de/product-detail/en/on-semiconductor/SS16HE/SS16HECT-ND/6009714" H 4350 6750 50  0001 C CNN
+F 4 "SS16HE" H 4350 6750 50  0001 C CNN "Manufacturer Part Number"
+F 5 "" H 4350 6750 50  0001 C CNN "Mouser Part Number"
+F 6 "SS16HECT-ND" H 4350 6750 50  0001 C CNN "Digikey Part No"
+	1    4350 6750
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GNDA #PWR?
+U 1 1 608D46E1
+P 4350 6950
+AR Path="/5F50E0CF/608D46E1" Ref="#PWR?"  Part="1" 
+AR Path="/5F50F017/608D46E1" Ref="#PWR067"  Part="1" 
+F 0 "#PWR067" H 4350 6700 50  0001 C CNN
+F 1 "GNDA" H 4355 6777 50  0000 C CNN
+F 2 "" H 4350 6950 50  0001 C CNN
+F 3 "" H 4350 6950 50  0001 C CNN
+	1    4350 6950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4350 6950 4350 6850
+Wire Wire Line
+	3650 6550 4000 6550
+Connection ~ 4000 6550
+Wire Wire Line
+	4000 6550 4350 6550
+Wire Wire Line
+	3650 6850 3650 6950
+$Comp
+L power:GNDA #PWR?
+U 1 1 609279C2
+P 4000 6950
+AR Path="/5F50E0CF/609279C2" Ref="#PWR?"  Part="1" 
+AR Path="/5F50F017/609279C2" Ref="#PWR065"  Part="1" 
+F 0 "#PWR065" H 4000 6700 50  0001 C CNN
+F 1 "GNDA" H 4005 6777 50  0000 C CNN
+F 2 "" H 4000 6950 50  0001 C CNN
+F 3 "" H 4000 6950 50  0001 C CNN
+	1    4000 6950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4000 6850 4000 6950
+Wire Wire Line
+	6450 1200 8100 1200
+Text Label 5250 1200 0    50   ~ 0
+BOOST_VOUT
+Text Label 4100 5850 2    50   ~ 0
+BOOST_VOUT
+Wire Wire Line
+	4100 5850 3650 5850
+Wire Wire Line
+	3650 5850 3650 6000
+Text Notes 3400 5650 0    50   ~ 10
+Output voltage sense divider\nand analog pin protection:
+Wire Notes Line
+	5450 5450 5450 7600
+Wire Notes Line
+	5450 7600 3250 7600
+Wire Notes Line
+	3250 7600 3250 5450
+Wire Notes Line
+	3250 5450 5450 5450
+Text HLabel 8100 1200 2    50   Output ~ 0
+BOOST_VOUT
+$EndSCHEMATC

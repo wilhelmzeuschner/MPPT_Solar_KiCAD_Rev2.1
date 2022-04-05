@@ -1,0 +1,68 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 5
+Title "MPPT"
+Date "2020-11-16"
+Rev "Rev 2.1"
+Comp ""
+Comment1 "Wilhelm Zeuschner"
+Comment2 "MPPT Solarboot Team HS Emden"
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Sheet
+S 1050 3050 2150 1400
+U 5F50E0CF
+F0 "Microcontroller" 50
+F1 "Microcontroller.sch" 50
+F2 "SDA_1" O R 3200 3250 50 
+F3 "SCL_1" O R 3200 3350 50 
+F4 "V_SENSE_OUT" I R 3200 3600 50 
+F5 "BOOST_EN" O R 3200 4000 50 
+F6 "BOOST_DRV" O R 3200 4100 50 
+F7 "~ALERT_ISENS" I R 3200 3450 50 
+$EndSheet
+$Sheet
+S 3450 3050 1600 1450
+U 5F50F017
+F0 "MPPT_Boost_Converter" 50
+F1 "MPPT_Boost_Converter.sch" 50
+F2 "BOOST_EN" I L 3450 4000 50 
+F3 "BOOST_DRV" I L 3450 4100 50 
+F4 "SDA" B L 3450 3250 50 
+F5 "SCL" B L 3450 3350 50 
+F6 "V_SENSE_OUT" O L 3450 3600 50 
+F7 "~ALERT_ISENS" B L 3450 3450 50 
+F8 "BOOST_VOUT" O R 5050 3250 50 
+$EndSheet
+$Sheet
+S 3950 5750 900  800 
+U 5FDB9336
+F0 "Mechanical" 50
+F1 "Mechanical.sch" 50
+$EndSheet
+Wire Wire Line
+	3200 3250 3450 3250
+Wire Wire Line
+	3450 3350 3200 3350
+Wire Wire Line
+	3200 3600 3450 3600
+Wire Wire Line
+	3200 4000 3450 4000
+Wire Wire Line
+	3450 4100 3200 4100
+Wire Wire Line
+	3450 3450 3200 3450
+Wire Wire Line
+	5050 3250 5550 3250
+$Sheet
+S 5550 3050 1200 850 
+U 609B8FCB
+F0 "MPPT_Power_In_Out" 50
+F1 "MPPT_Power_In_Out.sch" 50
+F2 "BOOST_VOUT" I L 5550 3250 50 
+$EndSheet
+$EndSCHEMATC

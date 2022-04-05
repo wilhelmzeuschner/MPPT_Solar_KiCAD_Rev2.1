@@ -1,0 +1,4 @@
+(fp_lib_table
+  (lib (name MPPT_Solar_KiCAD)(type KiCad)(uri ${KIPRJMOD}/mppt_footprints/MPPT_Solar_KiCAD.pretty)(options "")(descr ""))
+  (lib (name HS_Logo)(type KiCad)(uri ${KIPRJMOD}/mppt_footprints/mppt_logos_footprints/hs_emden_leer.pretty)(options "")(descr ""))
+)

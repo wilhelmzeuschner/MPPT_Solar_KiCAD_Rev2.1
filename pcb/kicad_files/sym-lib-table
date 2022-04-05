@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name "Nixie_Tube_Clock_Library_V3")(type "Legacy")(uri "S:/OneDrive/OneDrive - stud.hs-emden-leer.de/Privat - Hobby/Nixie Tube Clock/Nixie_Tube_Clock_KiCAD_Rev3/Libraries, Footprints and 3D Models/Nixie_Tube_Clock_Library_V3.lib")(options "")(descr "")(disabled))
+  (lib (name "MPPT_Solar_lib")(type "KiCad")(uri "${KIPRJMOD}/mppt_libraries/MPPT_Solar_lib.kicad_sym")(options "")(descr ""))
+)

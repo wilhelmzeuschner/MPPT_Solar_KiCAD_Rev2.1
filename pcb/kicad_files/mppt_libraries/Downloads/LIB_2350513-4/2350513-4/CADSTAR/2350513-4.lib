@@ -1,0 +1,18 @@
+.2350513-4 :1 ;Pluggable Terminal Blocks 4pos Header 90 Deg 5.0mmTail Lgth 4.5mm
+SHDRRA4W110P0X500_1X4_2160X830X1230P
+*STM J
+*NGS
+*PLB 1="1" 2="2" 3="3" 4="4"
+*MXP 4
+*DFN 2350513-4
+~!Manufacturer_Name (TE Connectivity)
+~!Manufacturer_Part_Number (2350513-4)
+~!Arrow Part Number (2350513-4)
+~!Arrow Price/Stock (-)
+~!Mouser Part Number (571-2350513-4)
+~!Link Mouser Price/Stock (https://www.mouser.co.uk/ProductDetail/TE-Connectivity/2350513-4?qs=UXgszm6BlbG4WCEm%2FlG5MA%3D%3D)
+~!Link Datasheet (https://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=2350513&DocType=Customer+Drawing&DocLang=English)
+~!Height (12.3mm)
+~!3D_Model (2350513-4)
+"2350513-4"
+1.1!U 2.1!U 3.1!U 4.1!U 

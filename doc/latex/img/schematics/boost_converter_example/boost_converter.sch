@@ -1,0 +1,182 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Device:D D?
+U 1 1 618BA1A4
+P 4100 1950
+F 0 "D?" H 4100 1733 50  0001 C CNN
+F 1 "D" H 4100 1825 50  0000 C CNN
+F 2 "" H 4100 1950 50  0001 C CNN
+F 3 "~" H 4100 1950 50  0001 C CNN
+	1    4100 1950
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:L L?
+U 1 1 618BAD25
+P 3350 1950
+F 0 "L?" V 3540 1950 50  0001 C CNN
+F 1 "L" V 3449 1950 50  0000 C CNN
+F 2 "" H 3350 1950 50  0001 C CNN
+F 3 "~" H 3350 1950 50  0001 C CNN
+	1    3350 1950
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:Q_NMOS_DGS Q?
+U 1 1 618BB69F
+P 3700 2350
+F 0 "Q?" H 3904 2396 50  0001 L CNN
+F 1 "NMOS" H 3904 2350 50  0000 L CNN
+F 2 "" H 3900 2450 50  0001 C CNN
+F 3 "~" H 3700 2350 50  0001 C CNN
+	1    3700 2350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3800 1950 3950 1950
+$Comp
+L Device:CP C?
+U 1 1 618BFFFF
+P 4400 2350
+F 0 "C?" H 4518 2396 50  0001 L CNN
+F 1 "C" H 4518 2350 50  0000 L CNN
+F 2 "" H 4438 2200 50  0001 C CNN
+F 3 "~" H 4400 2350 50  0001 C CNN
+	1    4400 2350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP C?
+U 1 1 618C0C08
+P 2900 2350
+F 0 "C?" H 3018 2396 50  0001 L CNN
+F 1 "C" H 3018 2350 50  0000 L CNN
+F 2 "" H 2938 2200 50  0001 C CNN
+F 3 "~" H 2900 2350 50  0001 C CNN
+	1    2900 2350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2900 2200 2900 1950
+Wire Wire Line
+	4250 1950 4400 1950
+Wire Wire Line
+	4400 1950 4400 2200
+$Comp
+L power:GND #PWR?
+U 1 1 618C1DFE
+P 2900 2650
+F 0 "#PWR?" H 2900 2400 50  0001 C CNN
+F 1 "GND" H 2905 2477 50  0000 C CNN
+F 2 "" H 2900 2650 50  0001 C CNN
+F 3 "" H 2900 2650 50  0001 C CNN
+	1    2900 2650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2900 2650 2900 2500
+$Comp
+L power:GND #PWR?
+U 1 1 618C2B8B
+P 3800 2650
+F 0 "#PWR?" H 3800 2400 50  0001 C CNN
+F 1 "GND" H 3805 2477 50  0000 C CNN
+F 2 "" H 3800 2650 50  0001 C CNN
+F 3 "" H 3800 2650 50  0001 C CNN
+	1    3800 2650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3800 2550 3800 2650
+Wire Wire Line
+	3800 1950 3800 2150
+Wire Wire Line
+	3500 1950 3800 1950
+Connection ~ 3800 1950
+Wire Wire Line
+	3200 1950 2900 1950
+Wire Wire Line
+	3500 2350 3250 2350
+Text Label 3250 2350 0    50   ~ 0
+PWM
+Wire Wire Line
+	4400 2500 4400 2650
+$Comp
+L power:GND #PWR?
+U 1 1 618C3446
+P 4400 2650
+F 0 "#PWR?" H 4400 2400 50  0001 C CNN
+F 1 "GND" H 4405 2477 50  0000 C CNN
+F 2 "" H 4400 2650 50  0001 C CNN
+F 3 "" H 4400 2650 50  0001 C CNN
+	1    4400 2650
+	1    0    0    -1  
+$EndComp
+Text Label 2900 1950 0    50   ~ 0
+U_ein
+Text Label 4850 1950 2    50   ~ 0
+U_aus
+$Comp
+L Device:R_Small R?
+U 1 1 618BC3C3
+P 4850 2500
+F 0 "R?" H 4909 2546 50  0001 L CNN
+F 1 "R" H 4909 2500 50  0000 L CNN
+F 2 "" V 4780 2500 50  0001 C CNN
+F 3 "~" H 4850 2500 50  0001 C CNN
+	1    4850 2500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4850 2300 4850 2350
+$Comp
+L Device:R_Small R?
+U 1 1 618BCD96
+P 4850 2200
+F 0 "R?" H 4909 2246 50  0001 L CNN
+F 1 "R" H 4909 2200 50  0000 L CNN
+F 2 "" V 4780 2200 50  0001 C CNN
+F 3 "~" H 4850 2200 50  0001 C CNN
+	1    4850 2200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 618BD633
+P 4850 2650
+F 0 "#PWR?" H 4850 2400 50  0001 C CNN
+F 1 "GND" H 4855 2477 50  0000 C CNN
+F 2 "" H 4850 2650 50  0001 C CNN
+F 3 "" H 4850 2650 50  0001 C CNN
+	1    4850 2650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4850 2600 4850 2650
+Wire Wire Line
+	4400 1950 4850 1950
+Wire Wire Line
+	4850 1950 4850 2100
+Connection ~ 4400 1950
+Wire Wire Line
+	4850 2350 5200 2350
+Connection ~ 4850 2350
+Wire Wire Line
+	4850 2350 4850 2400
+Text Label 5200 2350 2    50   ~ 0
+U_mess
+$EndSCHEMATC

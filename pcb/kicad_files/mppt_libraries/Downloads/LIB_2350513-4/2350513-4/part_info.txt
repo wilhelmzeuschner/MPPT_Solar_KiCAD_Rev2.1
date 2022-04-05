@@ -1,0 +1,9 @@
+Manufacturer=TE Connectivity
+PartNumber=2350513-4
+PartCategory=Connector
+PackageCategory=Header, Shrouded - Right Angle PTH Box
+PinCount=4
+Version=1.1
+Released=2020-05-23 04:37:04
+Downloaded=2020-08-31 11:23:49
+3D=Y

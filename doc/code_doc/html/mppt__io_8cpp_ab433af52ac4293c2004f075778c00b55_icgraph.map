@@ -1,0 +1,5 @@
+<map id="mppt_io_read_output_voltage" name="mppt_io_read_output_voltage">
+<area shape="rect" id="node1" title=" " alt="" coords="239,5,381,47"/>
+<area shape="rect" id="node2" href="$mppt__control__algo_8cpp.html#a3b2fd1876a11e9cd4bce8aa751742aaa" title=" " alt="" coords="108,13,191,39"/>
+<area shape="rect" id="node3" href="$mppt__main_8cpp.html#a4fc01d736fe50cf5b977f755b675f11d" title=" " alt="" coords="5,13,60,39"/>
+</map>

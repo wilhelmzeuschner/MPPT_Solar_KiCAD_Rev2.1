@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"name": "MPPT_Main",
+			"path": "."
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"numeric": "cpp"
+		}
+	}
+}

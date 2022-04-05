@@ -1,0 +1,17 @@
+<map id="setup" name="setup">
+<area shape="rect" id="node1" title=" " alt="" coords="5,209,60,236"/>
+<area shape="rect" id="node2" href="$mppt__main_8cpp.html#a04361e44df72145163c3b97c29cf31c6" title=" " alt="" coords="557,57,600,84"/>
+<area shape="rect" id="node3" href="$ina__sensor_8cpp.html#ad3d6cad16a572c4fae63acf0c0b01f2d" title=" " alt="" coords="143,83,221,109"/>
+<area shape="rect" id="node4" href="$mppt__control__algo_8cpp.html#a3b2fd1876a11e9cd4bce8aa751742aaa" title=" " alt="" coords="141,184,223,211"/>
+<area shape="rect" id="node12" href="$mppt__io_8cpp.html#a169bdff4db29d6600e038e415f3b329c" title=" " alt="" coords="115,235,249,261"/>
+<area shape="rect" id="node13" href="$mppt__io_8cpp.html#a0d2edb4624a6f2df26982e84d92988c0" title=" " alt="" coords="108,285,256,312"/>
+<area shape="rect" id="node14" href="$mppt__io_8cpp.html#a41beac21ea84d064007a5b965f56f647" title=" " alt="" coords="136,369,228,396"/>
+<area shape="rect" id="node5" href="$ina__sensor_8cpp.html#a19a05d3d236d623b9ed3fe5bafee39d6" title=" " alt="" coords="324,108,436,135"/>
+<area shape="rect" id="node6" href="$ina__sensor_8cpp.html#ae91e50ba1e9d06b4694e3d7fe30a175b" title=" " alt="" coords="321,159,439,185"/>
+<area shape="rect" id="node7" href="$mppt__io_8cpp.html#a4025e3c7103f754c5ad84c055e2b1e6b" title=" " alt="" coords="304,209,456,236"/>
+<area shape="rect" id="node9" href="$mppt__io_8cpp.html#ac59157bd196dd6f939ac379b27b8a792" title=" " alt="" coords="306,260,454,287"/>
+<area shape="rect" id="node10" href="$mppt__io_8cpp.html#ab433af52ac4293c2004f075778c00b55" title=" " alt="" coords="309,311,451,353"/>
+<area shape="rect" id="node11" href="$mppt__io_8cpp.html#afdcc8baf32b0936bf4f785ed324e282e" title=" " alt="" coords="321,377,439,404"/>
+<area shape="rect" id="node8" href="$mppt__io_8cpp.html#aeaaf407fe6aea10bb04ce4de5f0f79fb" title=" " alt="" coords="504,235,653,261"/>
+<area shape="rect" id="node15" href="$ina__sensor_8cpp.html#a65cf20508cb0ab97857868406e1e56e3" title=" " alt="" coords="318,428,442,455"/>
+</map>

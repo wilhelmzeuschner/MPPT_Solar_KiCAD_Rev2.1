@@ -1,0 +1,77 @@
+name: generate-mppt-pcb-artifacts
+
+on:
+  push:
+    paths:
+    - 'pcb/kicad_files/**.sch'
+    - 'pcb/kicad_files/**.kicad_pcb'
+    - 'pcb/kicad_files/**.kibot.yaml'
+    - '.github/workflows/generate-mppt-pcb-artifacts.yaml'
+    - '**.kibot.yaml'
+  pull_request:
+    paths:
+    - 'pcb/kicad_files/**.sch'
+    - 'pcb/kicad_files/**.kicad_pcb'
+    - 'pcb/kicad_files/**.kibot.yaml'
+    - '.github/workflows/generate-mppt-pcb-artifacts.yaml'
+    - '**.kibot.yaml'
+
+jobs:
+  generate-artifacts:
+    runs-on: ubuntu-latest
+    container: setsoft/kicad_auto:latest
+      
+    steps:
+    - name: Update system repositories, Install Required Libraries and Initialize git-lfs
+      run: |
+        apt update
+        apt -y install git git-lfs zip librsvg2-bin imagemagick
+        git lfs install
+
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+      with:
+        lfs: true
+
+    - name: Update the PCBs with the git hash
+      if: github.ref != 'refs/heads/master'
+      run: |
+        export COMMIT=$(git rev-parse --short HEAD)
+        echo "COMMIT = ${COMMIT}"
+        sed -i "s!<<hash>>!-${COMMIT}!" pcb/kicad_files/MPPT_Solar_KiCAD.kicad_pcb
+
+    - name: Update the PCBs with no hash on master
+      if: github.ref == 'refs/heads/master'
+      run: |
+        sed -i "s!<<hash>>!!" pcb/kicad_files/MPPT_Solar_KiCAD.kicad_pcb
+
+    - name: Prepare mppt PCB Artifacts
+      run: |
+        cd pcb/
+        rm -rf export/
+        cd kicad_files/
+        kibot -c config-4layer.kibot.yaml -d ../export
+
+    # Splitting this out to ensure a failed kibot run will mark a check as failed.
+    - name: Prepare mppt PCB Gerber Artifact
+      run: |
+        cd pcb/export/gerbers
+        zip -r -j ../mppt_gerbers.zip *        
+
+    - name: upload mppt PCB artifacts
+      uses: actions/upload-artifact@v2
+      if: github.event_name == 'pull_request' || (github.event_name == 'push' && github.repository != 'wilhelmzeuschner/MPPT_Solar_KiCAD_Rev2.1')
+      with:
+        name: mppt_pcb_output
+        path: pcb/export        
+
+
+    - name: Commit files
+      if: github.event_name == 'push' && github.repository == 'wilhelmzeuschner/MPPT_Solar_KiCAD_Rev2.1'
+      run: |
+        git add -f pcb/export
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git status
+        git commit -m "CI: Generate Gerbers and Associated Artifacts"
+        git push -u origin

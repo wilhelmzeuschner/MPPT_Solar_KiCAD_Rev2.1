@@ -1,0 +1,108 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP 2350513-4
+D Pluggable Terminal Blocks 4pos Header 90 Deg 5.0mmTail Lgth 4.5mm
+F https://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=2350513&DocType=Customer+Drawing&DocLang=English
+$ENDCMP
+#
+$CMP 24FC01T-I_OT
+D 1KB I2C EEPROM 1MHZ 1.7-5.5V 5-S
+K I2C Serial EEPROM Nonvolatile Memory
+F https://www.digikey.de/product-detail/en/microchip-technology/24FC01T-I-OT/24FC01T-I-OTCT-ND/9867141
+$ENDCMP
+#
+$CMP 3588TR
+F https://www.digikey.de/product-detail/en/keystone-electronics/3588TR/36-3588CT-ND/4772085
+$ENDCMP
+#
+$CMP 68uH
+D 74437429203680 Inductor with ferrite core
+K inductor choke coil reactor magnetic
+F https://www.mouser.de/datasheet/2/445/74437429203680-1721787.pdf
+$ENDCMP
+#
+$CMP AP2114H-3.3TRG1
+F https://www.mouser.de/datasheet/2/115/AP2114-271472.pdf
+$ENDCMP
+#
+$CMP AP63201WU-7
+F https://www.mouser.de/datasheet/2/115/AP63200-AP63201-AP63203-AP63205-1525010.pdf
+$ENDCMP
+#
+$CMP AP63203
+F https://www.mouser.de/datasheet/2/115/AP63200-AP63201-AP63203-AP63205-1525010.pdf
+$ENDCMP
+#
+$CMP BTS500851
+D Power Switch/Driver 1:1 N-Channel 38A PG-TO220-7
+F https://www.digikey.de/product-detail/en/infineon-technologies/BTS500851TMAATMA1/BTS500851TMAATMA1CT-ND/2231100
+$ENDCMP
+#
+$CMP DMP4015SSS
+D PMOS
+F https://www.digikey.de/product-detail/en/diodes-incorporated/DMP4015SSS-13/DMP4015SSS-13DICT-ND/5218252
+$ENDCMP
+#
+$CMP DMP6023LFG
+D P-MOSFET transistor, source/drain/gate, drain connected to mounting plane
+K transistor PMOS P-MOS P-MOSFET
+F https://www.digikey.de/product-detail/en/diodes-incorporated/DMP6023LFG-7/DMP6023LFG-7DICT-ND/5080368
+$ENDCMP
+#
+$CMP DMP6050
+D Dual PMOS
+F https://www.digikey.de/product-detail/en/diodes-incorporated/DMP6050SSD-13/DMP6050SSD-13DICT-ND/5371902
+$ENDCMP
+#
+$CMP INA226
+D High-Side or Low-Side Measurement, Bi-Directional Current and Power Monitor (0-36V) with I2C Compatible Interface, VSSOP-10
+K ADC I2C 16-Bit Oversampling Current Shunt
+F http://www.ti.com/lit/ds/symlink/ina226.pdf
+$ENDCMP
+#
+$CMP INA233
+D High-Side or Low-Side Measurement, Bi-Directional Current and Power Monitor (0-36V) with I2C, SMBus-, and PMBus-Compatible Interface, VSSOP-10
+K ADC I2C 16-Bit Oversampling Current Shunt
+F https://www.ti.com/lit/ds/symlink/ina233.pdf
+$ENDCMP
+#
+$CMP LMR50410
+D Buck Switching Regulator IC Positive Fixed 5V 1 Output 1A SOT-23-6
+F https://www.digikey.de/product-detail/en/texas-instruments/LMR50410Y5FQDBVRQ1/296-LMR50410Y5FQDBVRQ1CT-ND/13563137
+$ENDCMP
+#
+$CMP LMR50410Y5FQDBVRQ1
+D Buck Switching Regulator IC Positive Fixed 5V 1 Output 1A SOT-23-6
+F https://www.digikey.de/product-detail/en/texas-instruments/LMR50410Y5FQDBVRQ1/296-LMR50410Y5FQDBVRQ1CT-ND/13563137
+$ENDCMP
+#
+$CMP LTC2992
+F https://www.mouser.de/datasheet/2/609/ltc2992-1504204.pdf
+$ENDCMP
+#
+$CMP NCV7344D13R2G
+D 1/1 Transceiver Half CANbus 8-SOIC
+F https://www.digikey.de/product-detail/en/on-semiconductor/NCV7344D13R2G/NCV7344D13R2GOSCT-ND/9923536
+$ENDCMP
+#
+$CMP TPH2R608NH
+F https://www.mouser.de/datasheet/2/408/TPH2R608NH_datasheet_en_20150123-768911.pdf
+$ENDCMP
+#
+$CMP UCC27517
+D UCC2751x Single-Channel, High-Speed, Low-Side Gate Driver
+F https://www.digikey.de/product-detail/en/texas-instruments/UCC27517DBVR/296-39527-1-ND/5143471
+$ENDCMP
+#
+$CMP UCC27531DBVR
+D UCC2753x 2.5-A and 5-A, 35-VMAX VDD FET and IGBT Single-Gate Driver
+F https://www.digikey.de/product-detail/en/texas-instruments/UCC27531DBVR/296-35581-1-ND/3830022
+$ENDCMP
+#
+$CMP V15P8HM3_A_H
+D Schottky diode, anode on pins 1 and 2
+K diode Schottky SCHDPAK
+F https://www.mouser.de/ProductDetail/Vishay-Semiconductors/V15P8HM3_A-H?qs=Vcr9%2FL0R50jWoNOX3sd%252BYg%3D%3D
+$ENDCMP
+#
+#End Doc Library

@@ -1,0 +1,11 @@
+FILE_TYPE = MULTI_PHYS_TABLE;
+
+PART '2350513_4'
+CLASS = IO
+{========================================================================================}
+:"MANUFACTURER_NAME", "MANUFACTURER_PART_NUMBER"= "PART_NUMBER", "JEDEC_TYPE", "PACK_TYPE", "ARROW_PART_NUMBER", "ARROW_PRICE/STOCK", "MOUSER_PART_NUMBER", "MOUSER_PRICE/STOCK", "DESCRIPTION", "DATASHEET", "HEIGHT";
+{========================================================================================}
+ "TE Connectivity", "2350513-4" (!) = "", "SHDRRA4W110P0X500_1X4_2160X830X1230P", "Header, Shrouded - Right Angle PTH Box", "2350513-4", "", "571-2350513-4", "https://www.mouser.co.uk/ProductDetail/TE-Connectivity/2350513-4?qs=UXgszm6BlbG4WCEm%2FlG5MA%3D%3D", "Pluggable Terminal Blocks 4pos Header 90 Deg 5.0mmTail Lgth 4.5mm", "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=2350513&DocType=Customer+Drawing&DocLang=English", "12.3 mm"
+END_PART
+
+END.

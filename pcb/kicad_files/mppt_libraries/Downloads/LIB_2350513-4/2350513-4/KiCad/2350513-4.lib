@@ -1,0 +1,27 @@
+EESchema-LIBRARY Version 2.3
+#encoding utf-8
+#SamacSys ECAD Model 2350513-4
+#/11379059/286468/2.47/4/3/Connector
+DEF 2350513-4 J 0 30 Y Y 1 F N
+F0 "J" 650 300 50 H V L CNN
+F1 "2350513-4" 650 200 50 H V L CNN
+F2 "SHDRRA4W110P0X500_1X4_2160X830X1230P" 650 100 50 H I L CNN
+F3 "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=2350513&DocType=Customer+Drawing&DocLang=English" 650 0 50 H I L CNN
+F4 "Pluggable Terminal Blocks 4pos Header 90 Deg 5.0mmTail Lgth 4.5mm" 650 -100 50 H I L CNN "Description"
+F5 "12.3" 650 -200 50 H I L CNN "Height"
+F6 "TE Connectivity" 650 -300 50 H I L CNN "Manufacturer_Name"
+F7 "2350513-4" 650 -400 50 H I L CNN "Manufacturer_Part_Number"
+F8 "2350513-4" 650 -500 50 H I L CNN "Arrow Part Number"
+F9 "" 650 -600 50 H I L CNN "Arrow Price/Stock"
+F10 "571-2350513-4" 650 -700 50 H I L CNN "Mouser Part Number"
+F11 "https://www.mouser.co.uk/ProductDetail/TE-Connectivity/2350513-4?qs=UXgszm6BlbG4WCEm%2FlG5MA%3D%3D" 650 -800 50 H I L CNN "Mouser Price/Stock"
+DRAW
+X 1 1 0 0 200 R 50 50 0 0 P
+X 2 2 0 -100 200 R 50 50 0 0 P
+X 3 3 0 -200 200 R 50 50 0 0 P
+X 4 4 0 -300 200 R 50 50 0 0 P
+P 5 0 1 6 200 100 600 100 600 -400 200 -400 200 100 N
+ENDDRAW
+ENDDEF
+#
+#End Library
