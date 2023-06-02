@@ -16,6 +16,9 @@ This project was done as part of my studies at university. It's intended use cas
 
 ## How to use this repo:
 
+### Schematic:
+The schematic can be found here: https://github.com/wilhelmzeuschner/MPPT_Solar_KiCAD_Rev2.1/blob/main/pcb/export/Schematic.pdf
+
 ### Code:
 The source code is located here: https://github.com/wilhelmzeuschner/MPPT_Solar_KiCAD_Rev2.1/tree/main/code/MPPT_Main
 
